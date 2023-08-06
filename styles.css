@@ -19,7 +19,7 @@ body {
 }
 .about {
   height: 100vh; /* Adjust the height as needed */
-  width: 100%;
+  width: 100vw;
 }
 .mentor {
   height: 100vh; /* Adjust the height as needed */
@@ -28,7 +28,6 @@ body {
 .review {
   height: 100vh; /* Adjust the height as needed */
   width: 100vw;
-  /* background-color: red; */
 }
 #navbar-brand {
   left: 10%;
@@ -396,56 +395,6 @@ body {
   height: 40vh;
 }
 
-.col1 {
-  display: flex;
-  position: absolute;
-  align-items: stretch;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  top: 40%;
-  left: 5%;
-}
-.col1 > .row > a {
-  text-decoration: none;
-  line-height: 28px;
-  font-weight: 500;
-  font-family: Outfit;
-  color: #001826;
-  text-align: left;
-}
-.col2 {
-  position: absolute;
-  top: 15%;
-  width: 508px;
-}
-.col2 > p {
-  width: 500px;
-  padding: 50px;
-  font-size: 18px;
-  line-height: 28px;
-  font-family: Outfit;
-  color: #001826;
-  text-align: center;
-  display: inline-block;
-}
-.col3 {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  position: absolute;
-  top: 40%;
-  max-width: 300px !important;
-  right: 8%;
-  text-align: left;
-}
-.col3 > .third {
-  position: absolute;
-  top: 15%;
-  width: 508px;
-  right: 0%;
-}
-
 @media screen and (max-width: 768px) {
   .slide p {
     padding: 0 20px;
@@ -456,6 +405,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
+  ul.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
   .hero-section {
     height: 140vh;
   }
@@ -464,6 +421,7 @@ body {
   }
   .row {
     flex-direction: column;
+    width: 100%;
   }
 
   #left-content,
@@ -479,6 +437,47 @@ body {
   #wrapper {
     max-width: 100vw;
   }
+  .about-cards {
+    padding: 0 60px;
+  }
+  .patterntriangle-icon {
+    display: none;
+  }
+  .mentor {
+    height: 180vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .teacher-pic {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vw;
+    width: 50vw;
+  }
+  .right-content {
+    position: absolute;
+    top: 20%;
+    max-width: 100%;
+    left: 5%;
+  }
+  .shanawaz-sir-has {
+    width: 100%;
+  }
+  .footer-section>.row {
+    display: flex;
+    padding-left: 5%;
+  }
+  .col1 > .row > a {
+    text-decoration: none;
+    line-height: 28px;
+    font-weight: 500;
+    font-family: Outfit;
+    color: #001826;
+  }
 }
 @media only screen and (min-width: 1080px) {
   .card-parent {
@@ -489,8 +488,57 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .col1 {
+    display: flex;
+    position: absolute;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    top: 40%;
+    left: 5%;
+  }
+  .col1 > .row > a {
+    text-decoration: none;
+    line-height: 28px;
+    font-weight: 500;
+    font-family: Outfit;
+    color: #001826;
+    text-align: left;
+  }
+  .col2 {
+    position: absolute;
+    top: 15%;
+    width: 508px;
+  }
+  .col2 > p {
+    width: 500px;
+    padding: 50px;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: Outfit;
+    color: #001826;
+    text-align: center;
+    display: inline-block;
+  }
+  .col3 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 40%;
+    max-width: 300px !important;
+    right: 8%;
+    text-align: left;
+  }
+  .col3 > .third {
+    position: absolute;
+    top: 15%;
+    width: 508px;
+    right: 0%;
+  }
 }
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) and (min-width: 769px) {
   ul.navbar-nav {
     display: flex;
     flex-direction: row;
@@ -498,5 +546,54 @@ body {
   }
   .about {
     height: 150vh;
+  }
+  .col1 {
+    display: flex;
+    position: absolute;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    top: 40%;
+    left: 5%;
+  }
+  .col1 > .row > a {
+    text-decoration: none;
+    line-height: 28px;
+    font-weight: 500;
+    font-family: Outfit;
+    color: #001826;
+    text-align: left;
+  }
+  .col2 {
+    position: absolute;
+    top: 15%;
+    width: 508px;
+  }
+  .col2 > p {
+    width: 500px;
+    padding: 50px;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: Outfit;
+    color: #001826;
+    text-align: center;
+    display: inline-block;
+  }
+  .col3 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 40%;
+    max-width: 300px !important;
+    right: 8%;
+    text-align: left;
+  }
+  .col3 > .third {
+    position: absolute;
+    top: 15%;
+    width: 508px;
+    right: 0%;
   }
 }
